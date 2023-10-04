@@ -1,0 +1,214 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:wght@100;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:rgb(38, 39, 39);
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    
+}
+
+.container {
+
+    background-color:hwb(171 15% 82%) ;
+    max-width: 350px;
+    width: 100%;
+    padding: 25px 30px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px white;
+}
+
+
+
+form {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container .heading {
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: xx-large;
+    color: whitesmoke;
+    
+    
+}
+
+.container form .input-box {
+    width: 100;
+    height: 45px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.container form .input-box input {
+    height: 100%;
+    width: 100%;
+    /*outline none özelliğini focus özelliğine karşılık veriyoruz*/
+    outline: none;
+    font-size: 16px;
+    border: none;
+    background-color:hwb(171 15% 82%)  ;
+}
+.container form .input-box input[type="text"]{
+    color:white;
+}
+
+.container form .underline::before {
+    position: absolute;
+    content:'';
+    height: 2px;
+    width: 100%;
+    background: whitesmoke;
+    left: 0;
+    bottom: 0;
+
+
+
+}
+
+.container form .underline::after {
+    position: absolute;
+    content:'';
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #4FB99F;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.7s ease;
+
+}
+
+
+.container form .input-box input:focus~.container form .underline::after,
+.container form .input-box input:valid~.underline::after {
+    transform: scaleX(1);
+    transform-origin: left;
+
+}
+
+.forgot{
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 13px;
+   
+}
+.forgot a{
+    text-decoration: none;
+    color: whitesmoke;
+    
+}
+
+.forgot a:hover{
+    text-decoration: underline;
+}
+
+.input-box .button{
+    margin: 40px 0 20px 0;
+}
+
+form .input-box input[type="submit"]{
+    font-size: 17px;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #4FB99F;
+    transition: 0.4s;
+   
+   
+    
+}
+
+form .input-box input[type="submit"]:hover{
+    background:linear-gradient(to top,#4FB99F, rgba(118, 255, 212, 0.9) ); 
+    color: white;
+    
+    
+}
+
+.signup{
+    margin: 7px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+   
+}
+
+.signup p{
+    color : whitesmoke;
+}
+
+.signup a{
+    text-decoration: none;
+    color: lightcyan;
+}
+
+.signup a:hover{
+    text-decoration: underline;
+}
+
+
+.text{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.text p{
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+}
+
+.social_media{
+    margin-top: 20px;
+}
+
+.social_media .accounts .fa-brands {
+    padding:14px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 100px;
+    transition:0.5s;
+    border: 2px solid gainsboro;
+  }
+  
+  .fa-brands:hover {
+      opacity: 0.7;
+  }
+
+  .social_media .accounts .fa-facebook {
+    
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .fa-google {
+    background: #dd4b39;
+    color: white;
+  }
+.accounts{
+    display: flex;
+    justify-content: center;
+    gap:12px
+    
+}
